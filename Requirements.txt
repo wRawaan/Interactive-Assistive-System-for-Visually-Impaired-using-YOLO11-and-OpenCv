@@ -1,0 +1,8 @@
+ultralytics     # YOLO11 support
+torch           # PyTorch backend for YOLO
+opencv-python   # cv2
+numpy
+pyttsx3
+SpeechRecognition
+pyaudio
+pyyaml          # for YAML file reading
