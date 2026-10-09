@@ -1,4 +1,4 @@
-# Interactive Assistive System for Visually Impaired Using YOLO11 and OpenCV
+# Interactive Assistive System for Visually Impaired Using YOLO11 and OpenCv
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![YOLOv8/11](https://img.shields.io/badge/Model-YOLO11%20%2F%20YOLOv8-orange)
@@ -14,14 +14,15 @@ An advanced, real-time assistive technology solution designed to improve the ind
 The **Interactive Assistive System for Visually Impaired** processes live video feeds to interpret the user's surroundings and translates them into comprehensive audio-verbal descriptions. By combining deep learning object detection, monocular depth estimation, and color profiling, the system delivers rich contextual details about nearby objects.
 
 ### Core Architecture & Capabilities
-* **Real-Time Object Detection:** Identifies everyday items, furniture, and people from a live webcam feed using a custom-trained YOLO model.
-* **Monocular Depth Estimation:** Leverages the **MiDaS** model to compute the distance between the user and detected objects for spatial orientation.
-* **Color Recognition:** Analyzes the dominant color of detected objects to provide richer verbal descriptors.
-* **Height Approximation:** Calculates approximate physical heights relative to the scene.
-* **Text-to-Speech (TTS) Feedback:** Uses `pyttsx3` to speak out real-time alerts containing object type, color, distance, and size.
-* **Voice Command Integration:** Built-in `speech_recognition` allows hands-free control (starting and stopping detection via voice prompts).
-* **Interactive Graphical User Interface (GUI):** A clean Tkinter interface offering manual overrides, dynamic confidence sliders, and live status displays.
-* **Multithreaded Performance:** Ensures simultaneous object detection, audio feedback, and speech recognition without UI freezing.
+
+- **Real-Time Object Detection:** Identifies everyday items, furniture, and people from a live webcam feed using a custom-trained YOLO model.
+- **Monocular Depth Estimation:** Leverages the **MiDaS** model to compute the distance between the user and detected objects for spatial orientation.
+- **Color Recognition:** Analyzes the dominant color of detected objects to provide richer verbal descriptors.
+- **Height Approximation:** Calculates approximate physical heights relative to the scene.
+- **Text-to-Speech (TTS) Feedback:** Uses `pyttsx3` to speak out real-time alerts containing object type, color, distance, and size.
+- **Voice Command Integration:** Built-in `speech_recognition` allows hands-free control (starting and stopping detection via voice prompts).
+- **Interactive Graphical User Interface (GUI):** A clean Tkinter interface offering manual overrides, dynamic confidence sliders, and live status displays.
+- **Multithreaded Performance:** Ensures simultaneous object detection, audio feedback, and speech recognition without UI freezing.
 
 ---
 
@@ -40,48 +41,71 @@ The **Interactive Assistive System for Visually Impaired** processes live video 
 
 ## ⚙️ Installation & Setup
 
+### Prerequisites
+
+- Python 3.8 or newer
+- A webcam (for live detection)
+- A microphone (for voice commands)
+
 ### 1. Clone the Repository
-Open your terminal and run the following commands:
+
+Open your terminal and run:
+
 ```bash
-git clone [https://github.com/wRawaan/Interactive-Assistive-System-for-Virtually-Impaired-using-YOLO11-and-OpenCv.git](https://github.com/wRawaan/Interactive-Assistive-System-for-Virtually-Impaired-using-YOLO11-and-OpenCv.git)
-cd Interactive-Assistive-System-for-Virtually-Impaired-using-YOLO11-and-OpenCV
+git clone https://github.com/wRawaan/Interactive-Assistive-System-for-Visually-Impaired-using-YOLO11-and-OpenCv.git
+cd Interactive-Assistive-System-for-Visually-Impaired-using-YOLO11-and-OpenCv
+```
 
 ### 2. Install Dependencies
-Ensure you have Python installed, then install the required libraries:
+
+Make sure Python is installed, then install the required libraries:
+
 ```bash
 pip install -r requirements.txt
+```
 
-3. Run the Application
-Launch the assistant by executing:
+### 3. Run the Application
 
-Bash
+Launch the assistant:
+
+```bash
 python vision_assistant.py
-📁 Dataset
+```
+
+---
+
+## 📁 Dataset
+
 Due to file size constraints and repository optimization limits, the training and testing datasets are hosted externally.
 
-Download Dataset from Google Drive
+👉 [Download the dataset from Google Drive](https://drive.google.com/drive/u/1/folders/18Y3NdboV1JD1H5Aq9cCg0xgEfLHFBKVP)
 
-📊 Sample Output
-The system outputs verbal text descriptions concurrently through audio (TTS) and displays them in the active GUI console:
+---
 
-"A Table of gray color, about 31 cm tall, is 0.5 feet away."
+## 📊 Sample Output
 
-"A Mobile phone of black color, about 25 cm tall, is 0.5 feet away."
+The system outputs verbal descriptions through audio (TTS) and displays them at the same time in the GUI console:
 
-"A Bottle of black color, about 14 cm tall, is 0.5 feet away."
+> "A Table of gray color, about 31 cm tall, is 0.5 feet away."
 
-🤝 Acknowledgements
-We express our gratitude to the open-source community and creators of the foundational tools powering this project:
+> "A Mobile phone of black color, about 25 cm tall, is 0.5 feet away."
 
-Ultralytics for the YOLO object detection framework.
+> "A Bottle of black color, about 14 cm tall, is 0.5 feet away."
 
-Intel ISL for the MiDaS depth estimation model.
+---
 
-OpenCV & NumPy for foundational computer vision and matrix operations.
+## 🤝 Acknowledgements
 
-SpeechRecognition & pyttsx3 for enabling voice interaction and speech synthesis.
+We express our gratitude to the open-source community and the creators of the foundational tools powering this project:
 
-Tkinter for providing a lightweight and functional GUI interface.
+- **[Ultralytics](https://github.com/ultralytics/ultralytics)** for the YOLO object detection framework.
+- **[Intel ISL](https://github.com/isl-org/MiDaS)** for the MiDaS depth estimation model.
+- **OpenCV & NumPy** for foundational computer vision and matrix operations.
+- **SpeechRecognition & pyttsx3** for enabling voice interaction and speech synthesis.
+- **Tkinter** for providing a lightweight and functional GUI interface.
 
-📝 License
-This project is open-source and available under the MIT License.
+---
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
