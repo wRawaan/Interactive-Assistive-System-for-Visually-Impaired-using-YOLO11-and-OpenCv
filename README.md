@@ -90,7 +90,7 @@ The system outputs verbal descriptions through audio (TTS) and displays them at 
 
 > "A Mobile phone of black color, about 25 cm tall, is 0.5 feet away."
 
-> "A Bottle of black color, about 30 cm tall, is 0.5 feet away."
+> "A Bottle of black color, about 35 cm tall, is 0.5 feet away."
 
 ---
 
