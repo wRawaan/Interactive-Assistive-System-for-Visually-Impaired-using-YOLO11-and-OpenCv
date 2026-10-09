@@ -1,42 +1,87 @@
-# Interactive-Virtual-Assistant-for-Visually-Impaired-using-YOLO11-and-OpenCv
-YOLO11 detection, MiDaS depth estimation, color recognition, text-to-speech, voice control, GUI for visually impaired assistance
-#YOLO11 detection, MiDaS depth estimation, color recognition, text-to-speech, voice control, GUI for visually impaired assistance
+# Interactive Assistive System for Visually Impaired Using YOLO11 and OpenCV
 
-<h3>Project Overview</h3>
-The Interactive Assistive System for Visually Impaired is designed to improve the independence and safety of visually impaired individuals by providing real-time environmental awareness through intelligent computer vision and audio feedback. The core functionality is built around: Real-time object detection using a custom-trained YOLOv8 model that can identify a variety of common objects such as people, furniture, and everyday items from live webcam video. Depth estimation leveraging the MiDaS model to approximate the distance between the user and detected objects, enabling spatial understanding of the environment. Color recognition to provide richer descriptions by identifying the dominant color of detected objects. Height approximation to give an idea of object size relative to the user. Text-to-speech (TTS) integration using pyttsx3 to provide continuous spoken feedback describing detected objects, their distance, size, and color, allowing hands-free interaction. Voice command support via speech_recognition to enable starting and stopping the detection using simple voice prompts, enhancing accessibility. Graphical User Interface (GUI) built with Tkinter that provides manual controls for starting/stopping detection, adjusting confidence thresholds, and viewing system status. The system continuously processes frames from a webcam, performs object detection and depth analysis, and outputs synthesized speech to alert users about objects in their vicinity. The voice control functionality makes the system easier to operate without requiring physical interaction, which is crucial for the target user group. This project combines advanced AI models and accessible software interfaces to create an assistive technology solution that empowers visually impaired users to better understand and navigate their surroundings, promoting safety, confidence, and autonomy.
-<h3>Features</h3>
-1.Real-time object detection using a custom-trained YOLOv8 model.<br>
-2.Depth estimation for accurate distance measurement using MiDaS.<br>
-3.Dominant color recognition of detected objects for enhanced descriptions.<br>
-4.Approximate height calculation of objects in the scene.<br>
-5.Text-to-speech feedback that speaks out object details (type, color, distance, height).<br>
-6.Voice command support to start and stop detection hands-free.<br>
-7.Intuitive graphical user interface (GUI) with buttons and confidence slider.<br>
-8.Multithreaded design to ensure smooth detection, speech, and voice recognition concurrently.<br>
-<h3>Installation</h3>
-<h5>Clone the repository:</h5>
-git clone https://github.com/yourusername/vision-assistant.git<br>
-cd vision-assistant<br>
-<h5>Install dependencies: </h5>
-pip install -r requirements.txt<br>
-<h5>Run the application:</h5>
-python vision_assistant.py<br>
-<h3> Dataset</h3>
-Due to file size limitations, the dataset is not included in this repository.
-[Download Dataset from Google Drive](https://drive.google.com/drive/folders/1PFZzM97H1YwqXNx_oVwR4AZBPHTgmqJj?usp=drive_link)
-<h3>Sample Output</h3>
-The following example shows the object detection system’s spoken output (via Text-to-Speech) and displayed text in the GUI:
-<img src="sampleoutput.png">
-<b>A Table of gray color, about 31 cm tall, is 0.5 feet away.</b><br>
-<b>A Mobile phone of black color, about 25 cm tall, is 0.5 feet away.</b><br>
-<b>A Bottle of black color, about 14 cm tall, is 0.5 feet away.</b><br>
-<h3>Acknowledgements</h3>
-We would like to thank:<br>
-Ultralytics for the YOLOv8 object detection framework.<br>
-Intel ISL for the MiDaS depth estimation model.<br>
-OpenCV and NumPy for essential computer vision and data processing tools.<br>
-SpeechRecognition and pyttsx3 for enabling voice-based interaction and output.<br>
-Tkinter for providing the GUI framework used in this project.<br>
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![YOLOv8/11](https://img.shields.io/badge/Model-YOLO11%20%2F%20YOLOv8-orange)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+An advanced, real-time assistive technology solution designed to improve the independence, safety, and spatial awareness of visually impaired individuals through intelligent computer vision and audio feedback.
 
+---
 
+## 🚀 Project Overview
+
+The **Interactive Assistive System for Visually Impaired** processes live video feeds to interpret the user's surroundings and translates them into comprehensive audio-verbal descriptions. By combining deep learning object detection, monocular depth estimation, and color profiling, the system delivers rich contextual details about nearby objects.
+
+### Core Architecture & Capabilities
+* **Real-Time Object Detection:** Identifies everyday items, furniture, and people from a live webcam feed using a custom-trained YOLO model.
+* **Monocular Depth Estimation:** Leverages the **MiDaS** model to compute the distance between the user and detected objects for spatial orientation.
+* **Color Recognition:** Analyzes the dominant color of detected objects to provide richer verbal descriptors.
+* **Height Approximation:** Calculates approximate physical heights relative to the scene.
+* **Text-to-Speech (TTS) Feedback:** Uses `pyttsx3` to speak out real-time alerts containing object type, color, distance, and size.
+* **Voice Command Integration:** Built-in `speech_recognition` allows hands-free control (starting and stopping detection via voice prompts).
+* **Interactive Graphical User Interface (GUI):** A clean Tkinter interface offering manual overrides, dynamic confidence sliders, and live status displays.
+* **Multithreaded Performance:** Ensures simultaneous object detection, audio feedback, and speech recognition without UI freezing.
+
+---
+
+## 🛠️ Features
+
+1. Real-time object detection using a custom-trained YOLO model.
+2. Accurate distance calculation and depth estimation using MiDaS.
+3. Dominant color extraction for enhanced object descriptions.
+4. Approximate object height calculations.
+5. Automated text-to-speech feedback system.
+6. Hands-free voice command support.
+7. User-friendly Tkinter GUI with adjustable confidence thresholds.
+8. Multithreaded execution for zero-lag performance.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+Open your terminal and run the following commands:
+```bash
+git clone [https://github.com/wRawaan/Interactive-Assistive-System-for-Virtually-Impaired-using-YOLO11-and-OpenCv.git](https://github.com/wRawaan/Interactive-Assistive-System-for-Virtually-Impaired-using-YOLO11-and-OpenCv.git)
+cd Interactive-Assistive-System-for-Virtually-Impaired-using-YOLO11-and-OpenCV
+
+### 2. Install Dependencies
+Ensure you have Python installed, then install the required libraries:
+```bash
+pip install -r requirements.txt
+
+3. Run the Application
+Launch the assistant by executing:
+
+Bash
+python vision_assistant.py
+📁 Dataset
+Due to file size constraints and repository optimization limits, the training and testing datasets are hosted externally.
+
+Download Dataset from Google Drive
+
+📊 Sample Output
+The system outputs verbal text descriptions concurrently through audio (TTS) and displays them in the active GUI console:
+
+"A Table of gray color, about 31 cm tall, is 0.5 feet away."
+
+"A Mobile phone of black color, about 25 cm tall, is 0.5 feet away."
+
+"A Bottle of black color, about 14 cm tall, is 0.5 feet away."
+
+🤝 Acknowledgements
+We express our gratitude to the open-source community and creators of the foundational tools powering this project:
+
+Ultralytics for the YOLO object detection framework.
+
+Intel ISL for the MiDaS depth estimation model.
+
+OpenCV & NumPy for foundational computer vision and matrix operations.
+
+SpeechRecognition & pyttsx3 for enabling voice interaction and speech synthesis.
+
+Tkinter for providing a lightweight and functional GUI interface.
+
+📝 License
+This project is open-source and available under the MIT License.
